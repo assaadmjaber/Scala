@@ -1,4 +1,4 @@
-import akka.actor._
+//import akka.actor.typed
 
 var capital = Map("US" -> "Washington", "France" -> "Paris")
 
@@ -15,15 +15,15 @@ factorial(30)
 
 // Checksum calculator service
 
-class CheckSumActor extends Actor {
-  var sum = 0
-  def receive = {
-    case Data(byte) => sum += byte
-    case GetChecksum(requester) =>
-      val checksum = ~(sum & 0xFF) + 1
-      requester ! checksum
-  }
-}
+//class CheckSumActor extends akka.actor.Actor {
+//  var sum = 0
+//  def receive = {
+//    case Data(byte) => sum += byte
+//    case GetChecksum(requester) =>
+//      val checksum = ~(sum & 0xFF) + 1
+//      requester ! checksum
+//  }
+//}
 
 // Scala Test library
 
